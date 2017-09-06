@@ -1,0 +1,12 @@
+*.bak
+screenlog*
+*.swp
+*.lck
+*~
+.~lock.*
+.editix
+__pycache__/
+*.pyc
+/foxyproxy.json
+/foxyproxy.xml
+/notes
