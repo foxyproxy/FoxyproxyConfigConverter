@@ -1,0 +1,16 @@
+{% extends "base.html" %} {% block title %}FoxyProxy Configuration Converter{% endblock %}{% block body %}
+<div class="jumbotron">
+  <h1>Configuration Converter</h1>
+  <p class="lead">Convert proxy configurations for <a href="https://addons.mozilla.org/en-US/firefox/addon/foxyproxy-standard/">FoxyProxy Standard</a> v4.6.5 to v5.x.</p>
+</div>
+{% if upload_file == false %}
+<p>Please upload your <b><i>foxyproxy.xml</i></b> file (it should be in the root of your Firefox profile directory).</p>
+{% if UA['os'] in UA['path'].keys() %}<p>You can most likely find this file in a path similar to <code>{{ UA['path'][UA['os']]|safe }}</code>.</p>{% endif %}
+<p>If you are having issues finding your profile path, please reference <a href="https://support.mozilla.org/en-US/kb/profiles-where-firefox-stores-user-data#w_how-do-i-find-my-profile">this help article from Mozilla</a>.</p>
+<form method="POST" enctype="multipart/form-data">
+  <input type="file" name="oldConfData" /><br />
+  <input type="submit" value="Convert!" />
+</form>
+{% else %}
+<textarea rows="4" cols="50">{{ upload_file }}</textarea><br />
+<p><b><a href=".">Need to convert another?</a></b></p>{% endif %} {% endblock %}

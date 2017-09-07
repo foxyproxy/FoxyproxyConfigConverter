@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>{% block title %}{% endblock %}</title>
+  <!-- Bootstrap core CSS -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <link href="https://getbootstrap.com/examples/jumbotron-narrow/jumbotron-narrow.css" rel="stylesheet">
+</head>
+
+<body>
+  <div class="container">
+    <div class="header clearfix">
+      <nav>
+        <ul class="nav nav-pills pull-right">
+          <!-- the following opens in a new tab/window/whatever. the line after opens in the same tab/window/etc. -->
+          <!-- <li role="presentation"><a href="http://getfoxyproxy.org/" target="_blank">Back to FoxyProxy</a></li> -->
+          <li role="presentation"><a href="http://getfoxyproxy.org/">Back to FoxyProxy</a></li>
+        </ul>
+      </nav>
+    </div>
+    {% block body %} {% endblock %}
+    <footer class="footer">
+      <p><sub>The code for this converter is released under the <a href="https://www.gnu.org/licenses/gpl-3.0.en.html#content">GPL 3.0 License</a>. It can be found at <a href="https://code.getfoxyproxy.org/FoxyConfConvert/">our open-source code repository</a>.</sub></p>
+    </footer>
+  </div>
+  <!-- /container -->
+</body>
+
+</html>

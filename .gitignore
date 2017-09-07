@@ -7,6 +7,6 @@ screenlog*
 .editix
 __pycache__/
 *.pyc
-/foxyproxy.json
-/foxyproxy.xml
+*.json
+*.xml
 /notes
