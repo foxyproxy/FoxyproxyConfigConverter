@@ -8,7 +8,7 @@ def index():
     UA['os'] = request.user_agent.platform
     UA['path'] = {'macos': '/Users/<i>&lt;YOUR_USERNAME&gt;</i>/Library/Application Support/Firefox/Profiles/<i>&lt;YOUR_PROFILE&gt;</i>/<b><i>foxyproxy.xml</i></b>',
                   'linux': '/home/<i>&lt;YOUR_USERNAME&gt;</i>/.mozilla/firefox/<i>&lt;YOUR_PROFILE&gt;</i>/<b><i>foxyproxy.xml</i></b>',
-                  'windows': 'C:\Users\<i>&lt;YOUR_USERNAME&gt;</i>\AppData\Roaming\Mozilla\Firefox\Profiles\<i>&lt;YOUR_PROFILE&gt;</i>\\<b><i>foxyproxy.xml</i></b>'}
+                  'windows': r'C:\Users\<i>&lt;YOUR_USERNAME&gt;</i>\AppData\Roaming\Mozilla\Firefox\Profiles\<i>&lt;YOUR_PROFILE&gt;</i>\\<b><i>foxyproxy.xml</i></b>'}
     if request.method == 'GET':
         # Set the shortened version of the UA
         return render_template("index.html", upload_file = False, UA = UA)
