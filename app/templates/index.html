@@ -4,6 +4,8 @@
   <p class="lead">Convert proxy configurations for <a href="https://addons.mozilla.org/en-US/firefox/addon/foxyproxy-standard/">FoxyProxy Standard</a> v4.6.5 to v5.x.</p>
 </div>
 {% if upload_file == false %}
+<h2>Why is this necessary?</h2>
+<p>Mozilla changed how extensions can interact with Firefox. Plugins can no longer use filesystem access, so unfortunately it is necessary for you to manually convert the configuration into a format compatible with the new plugin system.</p>
 <p>Please upload your <b><i>foxyproxy.xml</i></b> file (it should be in the root of your Firefox profile directory).</p>
 {% if UA['os'] in UA['path'].keys() %}<p>You can most likely find this file in a path similar to <code>{{ UA['path'][UA['os']]|safe }}</code>.</p>{% endif %}
 <p>If you are having issues finding your profile path, please reference <a href="https://support.mozilla.org/en-US/kb/profiles-where-firefox-stores-user-data#w_how-do-i-find-my-profile">this help article from Mozilla</a>.</p>
